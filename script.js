@@ -1,5 +1,6 @@
-const guessNumBot = () => { function res () {
+const guessNumBot = () => {
   let randomNum = parseInt(Math.random() * 100)
+  function res () {
   let userNum = prompt('Угадай число от 1 до 100')
 
 
