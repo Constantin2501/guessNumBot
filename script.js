@@ -1,11 +1,12 @@
 const guessNumBot = () => { function res () {
   let randomNum = parseInt(Math.random() * 100)
   let userNum = prompt('Угадай число от 1 до 100')
-  console.log(userNum);
+  console.log(userNum)
 
 
   if (isNaN(userNum) || userNum === '') {
-     confirm('Введи число!')
+     alert('Введи число!')
+     res()
   }
 
   if (userNum === null) {
@@ -17,10 +18,12 @@ const guessNumBot = () => { function res () {
     alert('Поздравляю, Вы угадали!!!')
   
   }  else if (userNum > randomNum) {
-    prompt('Загаданное число меньше')
+    alert('Загаданное число меньше')
+    res()
 
   } else if (userNum < randomNum && userNum !== null && userNum !== '') {
-    prompt('Загаданное число больше')
+    alert('Загаданное число больше')
+    res()
 
   } 
 
